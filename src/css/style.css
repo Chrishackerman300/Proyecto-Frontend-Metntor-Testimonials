@@ -1,1 +1,278 @@
+/*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Variables*/
+:root{
+    /*Backgrounds*/
+    --bg-main: hsl(0, 0%, 87%);
+    --bg-daniel-card: hsl(263, 55%, 52%);
+    --bg-jonathan-card: hsl(217, 19%, 35%);
+    --bg-jeanette-kira--card: hsl(0, 0%, 100%);
+    --bg-patrick-card: hsl(219, 29%, 14%);
+
+    /*Fonts-Size's*/
+    --padding: 2rem 1.5rem;
+    --padding-t: 3rem;
+    --font: 'Barlow+Semi+Condensed', sans-serif;
+    --margin-b-cards: 20px;
+
+    /*Colors*/
+    --name-title: hsl(0, 0%, 85%);
+    --account-paragraph: hsl(0, 1%, 67%);
+    --border-img: hsl(263, 69%, 64%);
+    --color-card-3-5: hsl(217, 19%, 35%);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: var(--font);
+    background: var(--bg-main);
+}
+
+.principal{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: var(--padding-t);
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2, 370px);
+    gap: 20px;
+}
+
+/*Cards*/
+.card{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: var(--padding);
+    margin-bottom: var(--margin-b-cards);
+}
+
+.card--1{
+    background: var(--bg-daniel-card);
+    grid-column: 1/5;
+    grid-row: 1/2;
+    position: relative;
+}
+
+.card--container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.card--profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: var(--margin-b-cards);
+}
+
+.card-img{
+    display: block;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.card-img-1{
+    border: 3px solid hsl(263, 69%, 64%);;
+}
+
+.card-name{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--name-title);
+    margin-bottom:5px;
+}
+
+.card-account{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--account-paragraph);
+}
+
+.card-title{
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--name-title);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card-paragraph{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--account-paragraph);
+    text-align: justify;
+}
+
+.image-bg{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.card--2{
+    background: var(--bg-jonathan-card);
+    grid-column: 5/7;
+}
+
+.card--3{
+    background: var(--bg-jeanette-kira--card);
+    grid-column: 1/3;
+    grid-row: 2/-1;
+}
+
+.card--4{
+    background: var(--bg-patrick-card);
+    grid-column: 3/7;
+    grid-row: 2/-1;
+}
+
+.card--5{
+    background: var(--bg-jeanette-kira--card);
+    grid-column: 7/-1;
+    grid-row: 1/-1;
+}
+
+.card-name-3{
+    color: hsl(217, 19%, 35%);
+}
+
+.card-title-3{
+    color: hsl(217, 19%, 35%);
+}
+
+@media screen and (max-width: 768px){
+    .principal{
+        width: 100%;
+        height: 100%;
+    }
+
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: var(--padding-t);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /*Cards*/
+    .card{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        padding: var(--padding);
+        margin-bottom: var(--margin-b-cards);
+    }
+
+    .card--1{
+        background: var(--bg-daniel-card);
+        position: relative;
+    }
+
+    .card--container{
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+
+
+    .card--profile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+        margin-bottom: var(--margin-b-cards);
+    }
+
+    .card-img{
+        display: block;
+        width: 45px;
+        border-radius: 50%;
+    }
+
+    .card-img-1{
+        border: 3px solid hsl(263, 69%, 64%);
+    }
+
+    .card-data{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-name{
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--name-title);
+        margin-bottom: 5px;
+    }
+
+    .card-account{
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--account-paragraph);
+    }
+
+    .card--texts{
+        width: 100%;
+    }
+
+    .card-title{
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--name-title);
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .card-paragraph{
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: 500;
+        color: var(--account-paragraph);
+        text-align: justify;
+    }
+
+    .image-bg{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        z-index: 1;
+    }
+
+    .card--2{
+        background: var(--bg-jonathan-card);
+    }
+
+    .card--3,
+    .card--5{
+        background: var(--bg-jeanette-kira--card);
+    }
+
+    .card--4{
+        background: var(--bg-patrick-card);
+    }
+
+    .card-name-3{
+        color: hsl(217, 19%, 35%);
+    }
+
+    .card-title-3{
+        color: hsl(217, 19%, 35%);
+    }
+}
