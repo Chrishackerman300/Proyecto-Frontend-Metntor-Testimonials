@@ -3,7 +3,7 @@ Pryecto Testimonials Grid Sections
 Link del proyecto frontend mentor: https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7
 
 Fonts: 
-Barlow Semi Condensed
+Barlow Semi Condensed 
 
 Weights: 500, 600
 
